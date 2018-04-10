@@ -9,4 +9,10 @@ public class FizzBuzzGameTest {
         FizzBuzzGame game = new FizzBuzzGame();
         assertEquals("Fizz", game.translate(3));
     }
+
+    @Test
+    public void should_return_Buzz_when_have_5() {
+        FizzBuzzGame game = new FizzBuzzGame();
+        assertEquals("Buzz", game.translate(5));
+    }
 }
