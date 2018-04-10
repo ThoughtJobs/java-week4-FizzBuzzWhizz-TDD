@@ -59,4 +59,9 @@ public class FizzBuzzGameTest {
     public void should_return_Fizz_when_number_contains_3() throws Exception {
         assertEquals("Fizz", game.translate(13));
     }
+
+    @Test
+    public void should_return_original_number_when_number_does_not_match_any_rules() throws Exception {
+        assertEquals("2", game.translate(2));
+    }
 }
