@@ -21,4 +21,10 @@ public class FizzBuzzGameTest {
         FizzBuzzGame game = new FizzBuzzGame();
         assertEquals("Whizz", game.translate(7));
     }
+
+    @Test
+    public void should_return_Fizz_when_number_is_multiple_of_3() throws Exception {
+        FizzBuzzGame game = new FizzBuzzGame();
+        assertEquals("Fizz", game.translate(6));
+    }
 }
