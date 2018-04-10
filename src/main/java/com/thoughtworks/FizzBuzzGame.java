@@ -14,6 +14,12 @@ public class FizzBuzzGame {
     public List<String> getResults() {
         return results;
     }
+
+    public String translate(int number) {
+        if(number == 3)
+            return "Fizz";
+        return null;
+    }
 }
 
 
