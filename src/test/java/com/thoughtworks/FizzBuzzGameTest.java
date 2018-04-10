@@ -47,11 +47,16 @@ public class FizzBuzzGameTest {
 
     @Test
     public void should_return_BuzzWhizz_when_number_is_multiple_of_5_and_7() throws Exception {
-        assertEquals("BuzzWhizz", game.translate(35));
+        assertEquals("Fizz", game.translate(35));
     }
 
     @Test
     public void should_return_FizzBuzzWhizz_when_number_is_multiple_of_3_and_5_and_7() throws Exception {
         assertEquals("FizzBuzzWhizz", game.translate(105));
+    }
+
+    @Test
+    public void should_return_Fizz_when_number_contains_3() throws Exception {
+        assertEquals("Fizz", game.translate(13));
     }
 }

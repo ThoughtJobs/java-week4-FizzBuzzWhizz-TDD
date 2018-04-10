@@ -16,6 +16,8 @@ public class FizzBuzzGame {
     }
 
     public String translate(int number) {
+        if(new Integer(number).toString().contains("3"))
+            return "Fizz";
         if(number % 3 == 0 && number % 5 == 0 && number % 7 == 0)
             return "FizzBuzzWhizz";
         if(number % 3 == 0 && number % 5 == 0)
