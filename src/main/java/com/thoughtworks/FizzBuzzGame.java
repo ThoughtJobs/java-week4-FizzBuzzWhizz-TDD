@@ -6,6 +6,9 @@ import java.util.List;
 
 public class FizzBuzzGame {
     private List<String> results = new ArrayList<>();
+    final int FizzNumber = 3;
+    final int BuzzNumber = 5;
+    final int WhizzNumber = 7;
 
     public void start(int count) {
         for(int i = 1; i <= count; i++){
@@ -18,21 +21,21 @@ public class FizzBuzzGame {
     }
 
     public String translate(int number) {
-        if(new Integer(number).toString().contains("3"))
+        if(new Integer(number).toString().contains(new Integer(FizzNumber).toString()))
             return "Fizz";
-        if(number % 3 == 0 && number % 5 == 0 && number % 7 == 0)
+        if(number % FizzNumber == 0 && number % BuzzNumber == 0 && number % WhizzNumber == 0)
             return "FizzBuzzWhizz";
-        if(number % 3 == 0 && number % 5 == 0)
+        if(number % FizzNumber == 0 && number % BuzzNumber == 0)
             return "FizzBuzz";
-        if(number % 3 == 0 && number % 7 == 0)
+        if(number % FizzNumber == 0 && number % WhizzNumber == 0)
             return "FizzWhizz";
-        if(number % 5 == 0 && number % 7 == 0)
+        if(number % BuzzNumber == 0 && number % WhizzNumber == 0)
             return "BuzzWhizz";
-        if(number % 3 == 0)
+        if(number % FizzNumber == 0)
             return "Fizz";
-        if(number % 5 == 0)
+        if(number % BuzzNumber == 0)
             return "Buzz";
-        if(number % 7 == 0)
+        if(number % WhizzNumber == 0)
             return "Whizz";
         return new Integer(number).toString();
     }
