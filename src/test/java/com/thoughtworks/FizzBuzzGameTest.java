@@ -15,4 +15,10 @@ public class FizzBuzzGameTest {
         FizzBuzzGame game = new FizzBuzzGame();
         assertEquals("Buzz", game.translate(5));
     }
+
+    @Test
+    public void should_return_Whizz_when_have_7() {
+        FizzBuzzGame game = new FizzBuzzGame();
+        assertEquals("Whizz", game.translate(7));
+    }
 }
