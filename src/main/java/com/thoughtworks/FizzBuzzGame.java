@@ -3,12 +3,20 @@ package com.thoughtworks;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class FizzBuzzGame {
+    public FizzBuzzGame(int FizzNumber, int BuzzNumber, int WhizzNumber) {
+        this.FizzNumber = FizzNumber;
+        this.BuzzNumber = BuzzNumber;
+        this.WhizzNumber = WhizzNumber;
+    }
+
+    public FizzBuzzGame() {
+    }
+
     private List<String> results = new ArrayList<>();
-    final int FizzNumber = 3;
-    final int BuzzNumber = 5;
-    final int WhizzNumber = 7;
+     int FizzNumber = 3;
+     int BuzzNumber = 5;
+     int WhizzNumber = 7;
 
     public void start(int count) {
         for(int i = 1; i <= count; i++){
