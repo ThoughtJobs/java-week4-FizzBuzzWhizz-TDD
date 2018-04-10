@@ -8,7 +8,9 @@ public class FizzBuzzGame {
     private List<String> results = new ArrayList<>();
 
     public void start(int count) {
-
+        for(int i = 1; i <= count; i++){
+            results.add(translate(i));
+        }
     }
 
     public List<String> getResults() {
