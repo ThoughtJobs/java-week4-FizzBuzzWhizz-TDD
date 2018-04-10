@@ -4,27 +4,39 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class FizzBuzzGameTest {
+    FizzBuzzGame game = new FizzBuzzGame();
     @Test
     public void should_return_Fizz_when_have_3() {
-        FizzBuzzGame game = new FizzBuzzGame();
         assertEquals("Fizz", game.translate(3));
     }
 
     @Test
     public void should_return_Buzz_when_have_5() {
-        FizzBuzzGame game = new FizzBuzzGame();
         assertEquals("Buzz", game.translate(5));
     }
 
     @Test
     public void should_return_Whizz_when_have_7() {
-        FizzBuzzGame game = new FizzBuzzGame();
         assertEquals("Whizz", game.translate(7));
     }
 
     @Test
     public void should_return_Fizz_when_number_is_multiple_of_3() throws Exception {
-        FizzBuzzGame game = new FizzBuzzGame();
         assertEquals("Fizz", game.translate(6));
+    }
+
+    @Test
+    public void should_return_Buzz_when_number_is_multiple_of_5() throws Exception {
+        assertEquals("Buzz", game.translate(10));
+    }
+
+    @Test
+    public void should_return_Whizz_when_number_is_multiple_of_7() throws Exception {
+        assertEquals("Whizz", game.translate(14));
+    }
+
+    @Test
+    public void should_return_FizzBuzz_when_number_is_multiple_of_3_and_5() throws Exception {
+        assertEquals("FizzBuzz", game.translate(15));
     }
 }
